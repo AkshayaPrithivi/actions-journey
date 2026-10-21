@@ -11,4 +11,4 @@ jobs:
       - name: setuppython
         uses: actions/setup-python@v5
       - name: Show the Python version
-        run: pyhton3 --version
+        run: python3 --version
