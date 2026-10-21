@@ -1,15 +1,14 @@
-name: inspect runner
+name: inspect
 on: push
 jobs:
-  inspect-runner:
+  inspect:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Check out the repository
         uses: actions/checkout@v4
-      - name: kernel details
+      - name: Show runner details
         run: |
           uname -a
-          ls
-      - name: list of files in repoi
-        run: ls | wc
-    
+          ls -la
+      - name: Count files in the repository
+        run: find . -type f | wc -l
