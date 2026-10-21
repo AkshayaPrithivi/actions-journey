@@ -1,9 +1,8 @@
-name: first pipeline hosted on github
+name: hello
 on: push
 jobs:
-  first:
+  greet:
     runs-on: ubuntu-latest
     steps:
-      - name: first run
-        run: echo "Hi, This is  my first coded in github"
-
+      - name: Say hello
+        run: echo "Hello from GitHub Actions"
