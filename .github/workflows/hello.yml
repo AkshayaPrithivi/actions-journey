@@ -1,0 +1,9 @@
+name: first pipeline hosted on github
+on: push
+jobs:
+  first:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first run
+        run: echo "Hi, This is  my first coded in github"
+
