@@ -1,7 +1,7 @@
 name: format function
 on: push
 jobs:
-  format:
+  format22:
     runs-on: ubuntu-latest
     steps:
       - name: add label
