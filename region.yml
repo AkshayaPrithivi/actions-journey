@@ -1,0 +1,13 @@
+name: repo-vars
+on:
+  push:
+    paths:
+      - '.github/workflows/region.yml'
+jobs:
+  repo-vars:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print deploy region from repo vars
+        run: echo ${{ vars.DEPLOY_REGION }} 
+
+
