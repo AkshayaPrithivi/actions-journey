@@ -1,0 +1,9 @@
+name: pipeline after knowing concept
+on: push
+jobs:
+  actual-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my first understand program
+        run: echo "Great start!"
+
