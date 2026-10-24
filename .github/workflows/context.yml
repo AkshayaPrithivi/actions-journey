@@ -1,5 +1,8 @@
 name: context
-on: push
+on:
+  push:
+    paths:
+      - '.github/workflows/context.yml'
 jobs:
   context:
     runs-on: ubuntu-latest

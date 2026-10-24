@@ -1,5 +1,8 @@
 name: inspect
-on: push
+on:
+  push:
+    paths:
+      - '.github/workflows/inspect.yml'
 jobs:
   inspect:
     runs-on: ubuntu-latest

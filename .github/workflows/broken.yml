@@ -1,5 +1,8 @@
 name: site-check
-on: push
+on:
+  push:
+    paths:
+      - '.github/workflows/broken.yml'
 jobs:
   verify:
     runs-on: ubuntu-latest

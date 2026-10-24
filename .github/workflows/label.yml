@@ -1,5 +1,8 @@
 name: format function
-on: push
+on:
+  push:
+    paths:
+      - '.github/workflows/label.yml'
 jobs:
   format22:
     runs-on: ubuntu-latest

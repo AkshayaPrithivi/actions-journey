@@ -1,5 +1,8 @@
 name: pipeline after knowing concept
-on: push
+on:
+  push:
+    paths:
+      - '.github/workflows/afterunderstand.yml'
 jobs:
   actual-run:
     runs-on: ubuntu-latest
