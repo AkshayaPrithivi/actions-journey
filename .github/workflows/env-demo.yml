@@ -1,18 +1,18 @@
-name: env-demoironment
+name: env-demo
 on:
   push:
     paths:
       - '.github/workflows/env-demo.yml'
-env-demo:
+env:
   APP_NAME: Journey
 jobs:
-  env-demoironment:
+  env-demo:
     runs-on: ubuntu-latest
-    env-demo:
+    env:
       LOG_LEVEL: info
     steps:
       - name: print env-demo at diff level
-        env-demo:        
+        env:        
           LOG_LEVEL: debug
         run: echo $APP_NAME with the log level $LOG_LEVEL
 
