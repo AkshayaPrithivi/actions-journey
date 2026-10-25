@@ -1,0 +1,13 @@
+name: format function
+on:
+  push:
+    paths:
+      - '.github/workflows/label.yml'
+jobs:
+  format22:
+    runs-on: ubuntu-latest
+    steps:
+      - name: add label
+        run: echo " ${{ format('build-{0}-{1}', github.run_number, github.ref_name) }}"
+
+
