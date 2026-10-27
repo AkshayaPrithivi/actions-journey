@@ -1,0 +1,23 @@
+name: fanin fanout
+on:
+  push:
+    paths:
+      - '.github/workflows/release.yml'
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: lint
+        run: echo "lint"
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: UT
+        run: echo "UT"
+  package:
+    runs-on: ubuntu-latest
+    needs: [lint, unit-tests]
+    steps:
+      - name: pkg
+        run: echo "pkg"  
+
