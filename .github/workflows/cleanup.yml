@@ -7,12 +7,12 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
-      - name: Start test db
+      - name: Start test database
         run: echo "starting db"
       - name: Flaky check
         run: |
           echo "flaky check"
           exit 1
-      - name: stop test db
+      - name: stop test database
         if: always()
         run: echo "stop db"
