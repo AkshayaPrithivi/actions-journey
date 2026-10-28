@@ -1,0 +1,27 @@
+name: Three stage pipeline
+on:
+  push:
+    paths:
+      - '.github/workflows/pipeline.yml'
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   outputs: 
+     version: ${{ steps.ver.outputs.version }}
+   steps:
+     - name: print version
+       id: ver
+       run: echo "version=1.3.4" >> "$GITHUB_OUTPUT"
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: run test
+        run: echo "test"
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build, test]
+    steps:
+      - name: print version from build
+        run: echo " Deploying ${{needs.build.outputs.version}}"
+
