@@ -10,7 +10,7 @@ jobs:
       - name: Start test db
         run: echo "starting db"
       - name: Flaky check
-        run: !
+        run: |
           echo "flaky check"
           exit 1
       - name: stop test db
