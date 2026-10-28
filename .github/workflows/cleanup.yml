@@ -1,0 +1,18 @@
+name: cleanup
+on: 
+  push:
+    paths:
+      - '.github/workflows/cleanup.yml'
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start test db
+        run: echo "starting db"
+      - name: Flaky check
+        run: !
+          echo "flaky check"
+          exit 1
+      - name: stop test db
+        if: always()
+        run: echo "stop db"
